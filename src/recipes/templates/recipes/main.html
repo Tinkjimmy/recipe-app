@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <h1>Recipes list</h1>
+  {% comment%} HTML tag for heading {% endcomment%}
+
+  <table border="1" cellpadding="5" cellspacing="5">
+    {% comment%} start of table {% endcomment%}
+    <tr>
+      {% comment%} the
+    </tr>
+    <tr>
+      tag adds a new row {% endcomment%}
+      <td>Recipe's Name</td>
+      {% comment%} the
+      <td>tag adds a column {% endcomment%}</td>
+      <td>Recipes's Image</td>
+    </tr>
+    {% for object in object_list %}  {% comment%} go through each element of recipes list {% endcomment%}
+   <tr>
+       <td><a href ="{{object.get_absolute_url}}"> {% comment%} add links to recipe names  {% endcomment%}
+       {{object.name}}
+       </a></td>
+       <td><img src="{{object.pic.url}}" width="150" height="200" /></td>
+
+   </tr>
+   {% endfor %}
+  </table>
+</html>
