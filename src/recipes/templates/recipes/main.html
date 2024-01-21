@@ -2,7 +2,10 @@
 <html>
   <h1>Recipes list</h1>
   {% comment%} HTML tag for heading {% endcomment%}
-
+  <div>
+    
+    <a href ="{%url 'logout' %}" style="text-align:center"> Logout </a>
+   </div>
   <table border="1" cellpadding="5" cellspacing="5">
     {% comment%} start of table {% endcomment%}
     <tr>
@@ -23,6 +26,7 @@
        <td><img src="{{object.pic.url}}" width="150" height="200" /></td>
 
    </tr>
+
    {% endfor %}
   </table>
 </html>

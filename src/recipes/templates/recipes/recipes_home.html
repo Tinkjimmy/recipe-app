@@ -75,7 +75,14 @@
         <h1>Welcome to Tasty Delights</h1>
         <p>Discover and share your favorite recipes with the world</p>
     </header>
-
+    <div style="display: flex; flex-direction: row;  justify-content: space-evenly; margin-top: 50px; margin-bottom: 0px;">
+        <a  href ="{%url 'login' %}" style="text-align:center"> Login </a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href ="{%url 'logout' %}" style="text-align:center"> Logout </a>
+    </div>
     <div class="main-content">
         <p>Start exploring delicious recipes now!</p>
         <a href="/recipes/list/" class="btn-get-started">Explore Recipes</a>
@@ -99,6 +106,7 @@
             </div>
         </div>
     </div>
+    
 
 </body>
 </html>
