@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <h1> Search for recipes difficulty</h1>
+    <hr>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">search</button>
+</form>
+<br>
+{% if recipes_df %}
+    
+
+    <table border="1" cellpadding="5" cellspacing="5">
+        {% comment%} start of table {% endcomment%}
+        <tr>
+          {% comment%} the
+        </tr>
+        <tr>
+          tag adds a new row {% endcomment%}
+          <td>Recipe's Name</td>
+          
+          
+        {% for object in recipes_df %}  {% comment%} go through each element of recipes list {% endcomment%}
+        <tr>
+            <td><a href="{{ object.url }}">{{ object.name }}</a></td>
+         
+            
+        </tr>
+        
+    
+       {% endfor %}
+      </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+     <img src="data:image/png;base64, {{chart|safe}}"> 
+{% else %}
+   <h3> no data</h3>
+{% endif %}
+
+<body>
+    
+</body>
+</html> 
+
+
+
+
+

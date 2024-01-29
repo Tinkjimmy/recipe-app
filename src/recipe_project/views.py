@@ -15,7 +15,7 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('recipes:list')
+                return redirect('recipes:records')
 
             else:
                 error_message = 'Invalid username or password'
